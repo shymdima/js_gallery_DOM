@@ -3,10 +3,11 @@
 const gallery = document.querySelector('.gallery');
 
 const changeImage = (eventElement) => {
-  const largePrevious = document.querySelector('.gallery__large-img');
-
-  largePrevious.src = eventElement.target.src;
   eventElement.preventDefault();
+
+  const largePrevious = document.querySelector('.gallery__large-img');
+  largePrevious.src = eventElement.target.src;
+  
 };
 
 gallery.addEventListener('click', changeImage);
